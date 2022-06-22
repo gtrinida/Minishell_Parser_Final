@@ -86,7 +86,7 @@ void	fill_command(t_params *data, t_quotes *quot)
 	int	end;
 
 	end = quot->end;
-	if (data->node->need_to_assign)
+	if (data->node->need_to_assign || somethind_ahead(data->line, end))
 		end--;
 	if (!data->key)
 	{

@@ -62,6 +62,7 @@ typedef struct s_quotes
 	char	flag;
 }			t_quotes;
 
+int	somethind_ahead(char *line, int i);
 int	is_it_specsym(char sym);
 void	write_one_sym(t_params *data, t_quotes *quot, char *line);
 int	next_quot_check(char *line, int i);

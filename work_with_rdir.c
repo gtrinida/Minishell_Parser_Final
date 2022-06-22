@@ -24,9 +24,13 @@ int	quots_with_heredoc(char *line, int i)
 void	fill_agrunent_rdir_utils(t_rdir *tmp, t_quotes *quot, t_params *data)
 {
 	int	i;
+	int	end;
 
+	end = quot->end;
 	i = 0;
-	while (quot->start <= quot->end)
+	if (somethind_ahead(data->line, end))
+		end--;
+	while (quot->start <= end)
 	{
 		if (data->line[quot->start] != '\r')
 		{

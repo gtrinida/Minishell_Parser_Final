@@ -63,12 +63,12 @@ void	print_rdir(t_rdir *rdir)
 {
 	while (rdir->next)
 	{
-		printf("rdir argument: %s\n", rdir->arg);
-		printf("heredock quot: %d\n", rdir->heredock_quote);
+		printf("rdir argument:%s-\n", rdir->arg);
+		printf("heredock quot:%d-\n", rdir->heredock_quote);
 		rdir = rdir->next;
 	}
-	printf("rdir argument: %s\n", rdir->arg);
-	printf("heredock quot: %d\n", rdir->heredock_quote);
+	printf("rdir argument:%s-\n", rdir->arg);
+	printf("heredock quot:%d-\n", rdir->heredock_quote);
 }
 
 void	print_node(t_node *node)
@@ -98,10 +98,10 @@ void	print_node2(t_node *node)
 	int	i;
 
 	i = 0;
-	printf("command: %s\n", node->cmd);
+	printf("command:%s-\n", node->cmd);
 	while (node->n_arg > i)
 	{
-		printf("argument: %s\n", node->arg[i]);
+		printf("argument:%s-\n", node->arg[i]);
 		i++;
 	}
 }

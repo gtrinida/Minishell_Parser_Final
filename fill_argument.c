@@ -12,6 +12,20 @@
 
 #include "minishell.h"
 
+int	somethind_ahead(char *line, int i)
+{
+	i++;
+	if (line[i] == '\0')
+		return (0);
+	while (line[i])
+	{
+		if (!is_nothing(line[i]))
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 void	pass_params(t_params *data, t_quotes *quot, int i)
 {
 	quot->end = i;
@@ -71,7 +85,7 @@ void	fill_argument(t_params *data, t_quotes *quot)
 
 	end = quot->end;
 	i = 0;
-	if (data->node->need_to_assign)
+	if (data->node->need_to_assign || somethind_ahead(data->line, end))
 		end--;
 	data->node->arg[quot->i_arg] = malloc(end - quot->start + 2);
 	while (quot->start <= end)
