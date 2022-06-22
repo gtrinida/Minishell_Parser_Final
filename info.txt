@@ -1,0 +1,433 @@
+Идеально работающие кейсы:
++ ""''"echo" = echo
++ ""''"echo""""" = echo
++ ""''"echo"""'"" = > (не fast_check)
++ echo "Hello Wor"ld" = >
++ $ = $
++ echo 123$ = echo 123$
++ echo $123 = echo 23
++ echo 1$23 = echo 13
++ echo 12$3 = echo 12
++ echo 1$21$2 = echo 11 
++ echo $'123' = echo 123 
++ echo $"123" = echo 123
++ echo ''$''123 = echo 123
++ $lecho"s -a echo 123 = >
++ -$lecho"s -a echo 123 = >
++ $"echo"s -a echo 123 = echos cnf 
++ $"echo" 123 = echo 123
++ ec$ho = ec cnf
++ echo$ = echo$ cnf
++ $123 echo = 23 cnf
++ $$echo = echo
++ ech$$o = echo
++ echo aaaaAAAAAAAAflsgoagsaAAAAAAAA$ = echo aaaaAAAAAAAAflsgoagsaAAAAAAAA$
++ $$$$$$$$$$$$$$echo = echo
++ echo aaaa$AA $ = echo aaaa $
++ echo $USER = echo gtrinida
++ echo $"USER" = echo USER
++ echo $"US"ER"$ = >
++ echo $"US"ER$ = echo USER$
++ echo aaaa$AA$ = echo aaaa$ 
++ echo aaaa$AA      $ = echo aaaa $
++ echo aaaa$AA  $ = echo aaaa $
++ $e$c$h$o$ 123 = $ cnf
++ $e$c$h$o$123 = 23 cnf
++ e$cho$ = e$
++ $echo$ = $ cnf
++ $echo$123 = 23 cnf
++ echo $USER = echo gtrinida
++ $USER = gtrinida cnf
++ $echo$USER = gtrinida cnf;
++ echo $USER $USER $USER = echo gtrinida gtrinida gtrinida
++ $'USER' = USER cnf
++ $"USER" = USER cnf
++ echo aaaa$AA     $ = echo aaaa $
++ "$USERA" "$" = cnf (надо проверить что будет на маке)
++ echo "$USE"R = echo R
++ echo "$USE"R$ = echo R$
++ ' ""'$ =  ""$ cnf
++ '"" '$ = "" $ cnf
++ ""echo $A"" = echo
++ $'echo' = echo
++ $"lecho"s -a echo 123 = lechos cnf
++ ""$USER"" = gtrinida cnf
++ "1"$USER"" = 1gtrinida cnf
++ "$USERA""$" = $ cnf 
++ $echo$USER  = gtrinida cnf;
++ "$AA$" = $ cnf 
++ '$$$$$$$$$$$$$$$echo' = $$$$$$$$$$$$$$$echo cnf 
++ "$$$$$$$$$$$$$$$USER" == "$USER" = gtrinida сnf 
++ "$$$$$$$echo$$$$$" = $ cnf 
++ echo "Hello """ "" = echo Hello 
++ echo "                            1" =                           1
++ echo "$"123 = echo $123 
++ echo "$123" = echo 23
++ echo "1$21$2" = echo 11 
++ echo $"$123" = echo 23 
++ echo $'$123' = echo $123 
++ echo '$123' = echo $123 
++ echo '$"123"' = echo $"123" 
++ "echo" "$123" = echo 23 
++ "echo" '$123' = echo $123 
++ echo "$123$" = echo 23$
++ echo '"$"' "123" = echo "$" 123
++ echo '"$"123' = echo "$"123 
++ echo """$""" 123 = echo $ 123 
++ echo '''$''' 123 = echo $ 123 
++ echo $"'$'" 123 = echo '$' 123 
++ echo "$1 '$'" = echo  '$' 
++ echo "$1            '$'" = echo            '$' 
++ echo "'$'123" = echo '$'123 
++ echo '1$2' "1$2" = echo 1$2 1
++ "$" = $ 
++ echo $echo $USER = echo gtrinida
++ $e$c$h$o 123 = 123 cnf
++ "$USER" = gtrinida cnf 
++ echo " $USER$" = echo  gtrinida$ 
++ "$$$$$$$'echo'$$$$$" = $'echo'$ cnf 
++ "$echo"s -a echo 123 = s cnf 
++ echo ' $USE'R$ = echo  $USER$ 
++ echo "aaaa$AA$" = echo aaaa$ 
++ echo '$USE'R$ = echo $USER$
++ '$' "aaa$AA$" = $ cnf 
++ '$USER' = $USER cnf 
++ $'$USER' = $USER cnf 
++ echo '$USER' = echo $USER 
++ echo '   $USER' = echo   $USER 
++ echo '$ USER' = echo $ USER 
++ 'echo $USER' = echo $USER cnf 
++ echo $" "USER = echo  USER 
++ '$AA' = $AA cnf т.к не нашли такой команды 
++ '$echo $USER' = $echo $USER cnf
++ '$echo $echo $USER $echo echo 123' = $echo $echo $USER $echo echo 123 cnf 
++ '"$USER"' = "$USER"  
++ echo "$ USER" = echo $ USER 
++ echo "   $USER" = echo   gtrinida 
++ "echo $USER" = echo gtrinida cnf 
++ "$echo $USER" =  gtrinida cnf 
++ "$USER" echo 123 = gtrinida cnf 
++ echo "" 1 "" = echo  1 
++ "abc$AA             1" = abc             1 cnf
++ """abc$AA             1""" = abc             1 cnf
++ "$AA$" = $ cnf
++ "$AA $" =  $ cnf
++ "A B $USER" ABC =  A B gtrinida cnf 
++ '"abc$AA$"1' = "abc$AA$"1 cnf
++ ""abc$AA$1"" = abc cnf
++ $"$USER" = gtrinida cnf 
++ echo "$USER" = echo gtrinida 
++ "   $USER" =    gtrinida cnf 
++ "$USER $USER" $USER = gtrinida gtrinida cnf
++ "'$USER'" = 'gtrinida' cnf
++ "''" = '' cnf
++ ""echo$"" = echo
++ echo aaaa"$AA' $$$" = echo aaaa' $
++ $AA = ничего
++ $echo = ничего 
++ $echo$sdsasdfa = ничего 
++ $$$$$$$$$$$$$$$echo == $echo = ничего 
++ """"$USER"""" = gtrinida cnf 
++ $echo $USER  = gtrinida cnf 
++ echo aaaa"$AA' $$$" = echo aaaa' $ 
++ echo aaaa"$AA123 $" = echo aaaa $ 
++ echo aaaa"$AA' 123 $" = echo aaaa' 123 $ 
++ "$echo"s -a echo 123 = s cnf 
++ "echo fkskf" fkkd fkspvaaspogkwoskagogk sg = echo fkskf cnf 
++ "echo a "skjoj = echo a skjoj cnf 
++ "$   " = $   ; 
++ $lala echo 123 = echo 123 
++ $ls echo 123 = echo 123 
++ $ls -a echo 123 = -a cnf 
++ $ls -a = -a cnf 
++ $echo 123 = 123 cnf 
++ $echo $echo echo 123 = echo 123  
++ $echo $123 = 23 cnf 
++ $echo $123 $123 123 = 23 cnf 
++ $echo $USER = gtrinida cnf 
++ $e$cho $echo 123 = 123 cnf 
++ echo '$' "aaaa$AA$      " = echo $ aaaa$ 
++ echo '$' "aaaa$AA$" = echo $ aaaa$ 
++ echo '$' "aaaa$AA$" Fsjis = echo $ aaaa$ Fsjis 
++ echo aaaa"$AA' $" = echo aaaa' $ 
++ "$USERA "  =  cnf 
++ "$USERA "123 =  123 cnf 
++ $echo $echo "$USER $ "echo echo 123 = gtrinida $ echo cnf 
++ просто enter 
++ '$US'ER = $USER cnf 
++ $echo '$USER' = $USER cnf 
++ $echo $echo '$USER '$echo echo 123 = $USER  cnf 
++ $echo $echo '$USER '$123 echo 123 = $USER 23 cnf 
++ '$USER'$USER = $USERgtrinida cnf 
++ $echo '$echo $USER $echo echo 123' = $echo $USER $echo echo 123 cnf 
++ $echo "$USER" = gtrinida cnf 
++ "$USER $ "echo = gtrinida $ echo cnf 
++ "$USER $ "$echo = gtrinida $  cnf 
++ "$USER $ $"echo = gtrinida $ $echo cnf 
++ $echo $echo "$USER "$echo echo 123 = gtrinida  cnf 
++ $echo $echo "$USER "$123 echo 123 = gtrinida 23 cnf 
++ $echo $ef $echo echo 123 = echo 123 
++ "$USER "e = gtrinida e cnf 
++ "$USER "$ = gtrinida $ cnf 
++ "$USER "$e = gtrinida  cnf 
++ "$USER "$123 = gtrinida 23 cnf 
++ echo '$' " aaaa$AA$" = echo $  aaaa$ 
++ echo '$' " aaaa$AA$ " = echo $  aaaa$ 
++ echo '$' "aaaa$AA$ " echo $aaaa$ = echo $ aaaa$  echo $ 
++ "$US"ER = ER cnf 
++ '$USER'$123 = $USER23 cnf 
++ "$echo1 $echo2 $echo3 $echo4 $echo5" =     cnf
++ """$USER""" = gtrinida cnf 
++ "$USER"123 = gtrinida123 cnf 
++ echo '' $ '' 123 = echo  $  123 
++ "echo '$' "aaaa$AA$"" =  echo '$' aaaa cnf 
++ "echo '$' "aaaa$AA$" " = echo '$' aaaa  cnf 
++  ""abc$AA$"" = abc cnf 
++ ""abc$AA1"" = abc cnf 
++ ""abc$AA$A1AA"" = abc cnf 
++ $echo $echo $USER $echo echo 123 = gtrinida cnf 
++ echo $echo $USER $echo echo 123 = gtrinida echo 123 
++ $echo $echo '$USER' $echo echo 123 = $USER cnf 
++ $echo '$echo $USER' $echo echo 123 = $echo $USER cnf 
++ echo $echo '$USER' $echo echo 123 = echo $USER echo 123 
++ echo $echo '$USER' $echo 123 = echo $USER 123 
++ $echo $echo "$USER" $echo echo 123 = gtrinida cnf 
++ echo $echo "$USER" $echo echo 123 = echo gtrinida echo 123  
++ echo $echo "$USER" $echo 123 = echo gtrinida 123 
++ ''$ = $ cnf
++ ""abcAA             $"" = abcAA cnf 
++ echo ""$""123 = echo 123
++ ""echo '$' "aaaa$AA$""" = echo $ aaaa$
++ echo """"$"""" 123 = echo  123
++ ""echo             $123"" = echo 23
++  ""echo             $"" "123" = echo  123
++ ""abc$AA             $"" = abc cnf
++ ""abc$AA             1"" = abc cnf
++ ""/ - / cnf
++ ""a = a cnf
++ '' =  cnf
++ "" =  cnf
++ ""$ =  $ cnf 
++ "''"$ = ''$ cnf
++ '""'$ = ""$ cnf
++ '"""' = """ cnf
++ '""' = "" cnf
++ '"' = " cnf
++ "'" = ' cnf
++ """""""""""""""""""""""""""""""""''" = '' 
++ """echo '$' "aaaa$AA$"""" = echo '$' aaaa cnf
++ ""abc$AA$"1" = abc1 cnf
++ ""$AA$"" =  cnf 
++ echo $echo '"$USER"' $echo 123 = echo "$USER" 123
++ "$AA" =  cnf
++ "$USERA" =  cnf 
++ "$UU" $ =  cnf 
++ ""''"echo""""'" = echo' 
++ '' aaa =  cnf 
++ echo ""$"" 123 = echo  123
++ echo ""$"" "123" = echo  123
++ $ echo = $ cnf
++ $ echo 123 = $ cnf
++ echo $ aaaa$aa = echo $ aaaa
++ echo $ aaaaaa$ = echo $ aaaaaa$
++ echo $ aaaa$AA$ = echo $ aaaa$
++ $ 'USER' = $ cnf
++ $ "USER" = $ cnf
++ echo $ aaaa$AA$ = echo $ aaaa$
++ echo $ "$" = echo $ $ 
++ $echo $ "echo" 123 = $ cnd
++ $?
++ "$?"
++ ""$?""
++ '$?'
++ '"$?"'
+
+14.06.22
++ Добавить обработку редиректов
+< = 0
+« = 1
+> = 2
+» = 3
+	+ Записать кейсы с редиректом '>'
+		+ >echo = работает
+		+ > echo = работает
+		+ ec>ho 123 = ec cnf 
+		+ echo "> " = echo > 
+		+ echo > echo = работает
+		+ echo echo > ls > 123 = работает (v)
+		+ ec>cho 123 = ec cnf, работает
+		+ echo 123 > ls = работает 
+		+ echo > $123 = работает 
+		+ echo 123 543 > ls > 123 > 540 = работает (v)
+		+ echo > / = bash: /: Is a directory
+		+ "echo > 321" = echo > 321 cnf
+		+ echo 1>23 = работает
+		+ echo 1>23 ls = работает 
+		+ ec >ho 123 = ec cnf (сработал)
+		+ "ech>o>" 123 = ech>o> cnf
+		+ 'e>cho' 123 = ec>ho cnf
+		+ echo """>""" = echo >
+		+ echo '''>''' = echo >
+		+ echo '>' = echo >
+		+ echo ">" = echo >
+		+ echo "'>'" = echo '>'
+		+ echo '">"' = echo ">"		
+
+		+ ec>>>ho = bash: syntax error near unexpected token `>'
+		+ ec>>>>ho = bash: syntax error near unexpected token `>>'
+		+ ec>>>>>>ho = bash: syntax error near unexpected token `>>'
+		+ echo > = bash: syntax error near unexpected token `newline'
+		+ > = bash: syntax error near unexpected token `newline'
+		+ echo 123 > = bash: syntax error near unexpected token `newline'
+		+ echo > > 123 = bash: syntax error near unexpected token `>'
+		+ echo 123 > | echo 321 > 234 = bash: syntax error near unexpected token `|'
+		+ echo 123 >| = bash: syntax error near unexpected token `newline'
+		+ echo 123 >|| = bash: syntax error near unexpected token `|'
+		+ echo 123 > | echo 321 > 234 > = bash: syntax error near unexpected token `|'
+		+ echo 123 > > = bash: syntax error near unexpected token `>'
+		+ > > = bash: syntax error near unexpected token `>'
+		+ echo > | = bash: syntax error near unexpected token `|'
+		
+		- echo ''>'' = bash: : No such file or directory
+		- echo "">"" = bash: : No such file or directory
+
+ 	+ Записать кейсы с редиректом '<'
+	 	+ <echo = bash: echo: No such file or directory (по сути работает)
+		+ < echo = bash: echo: No such file or directory (по сути работает)
+		+ echo < echo = bash: echo: No such file or directory (по сути работает)
+		+ echo echo < ls < 123 = bash: ls: No such file or directory (по сути работает)
+		+ ec<cho 123 = bash: cho: No such file or directory (по сути работает) 
+		+ echo 1<23 = bash: 23: No such file or directory
+		+ echo 123 < ls = bash: ls: No such file or directory
+		+ echo 123 543 < ls < 123 < 540 = bash: ls: No such file or directory 
+		+ "echo < 321" = echo < 321 cnf
+		+ echo "< " = echo <
+		+ echo "'<'" = echo '<'
+		+ echo '<' = echo <
+		+ echo "<" = echo <
+		+ echo '"<"' = echo "<"
+		+ echo """<""" = echo <
+		+ echo '''<''' = echo <
+
+		+ echo 123 <| = bash: syntax error near unexpected token `|'
+		+ echo 123 <|| = bash: syntax error near unexpected token `||'
+	 	+ echo < = bash: syntax error near unexpected token `newline'
+		+ < = bash: syntax error near unexpected token `newline'
+		+ echo < = bash: syntax error near unexpected token `newline'
+		+ echo 123 < = bash: syntax error near unexpected token `newline'
+		+ echo < < 123 = bash: syntax error near unexpected token `<'
+		+ echo 123 < | echo 321 < 234 = bash: syntax error near unexpected token `|'
+		+ echo 123 < | echo 321 < 234 < = bash: syntax error near unexpected token `|'
+		+ echo 123 < < = bash: syntax error near unexpected token `<'
+		+ < < = bash: syntax error near unexpected token `<'
+
+		- echo ""<"" = bash: : No such file or directory
+		- echo ''<'' = bash: : No such file or directory
+		
+	+ Записать кейсы с редиректом '>>'
+		+ >>echo = работает
+		+ >> echo = работает 
+		+ echo >> echo = работает
+		+ ec>>cho 123 = ec cnf (работает)
+		+ echo 1>>23 = работает
+		+ "echo >> 321" = echo >> 321 cnf
+		+ echo ">> " = echo >>
+		+ echo 123 >> ls = работает
+		+ echo echo >> ls >> 123 = работает
+		+ echo 123 543 >> ls >> 123 >> 540 = работает
+		+ echo "'>>'" = echo '>>'
+		+ echo '>>' = echo >>
+		+ echo ">>" = echo >>
+		+ echo '">>"' = echo ">>"
+		+ echo """>>""" = echo >>
+		+ echo '''>>''' = echo >>
+
+		+ echo 123 >>| = bash: syntax error near unexpected token `|'
+		+ echo 123 >>|| = bash: syntax error near unexpected token `||'
+		+ echo >> = bash: syntax error near unexpected token `newline'
+		+ >> = bash: syntax error near unexpected token `newline'
+		+ echo >> = bash: syntax error near unexpected token `newline'
+		+ echo 123 >> = bash: syntax error near unexpected token `newline'
+		+ echo >> >> 123 = bash: syntax error near unexpected token `>>'
+		+ echo >> << 123 = bash: syntax error near unexpected token `<<'
+		+ echo 123 >> | echo 321 >> 234 = bash: syntax error near unexpected token `|'
+		+ echo 123 >> | echo 321 >> 234 >> = bash: syntax error near unexpected token `|'
+		+ echo 123 >> >> = bash: syntax error near unexpected token `>>'
+		+ >> >> = bash: syntax error near unexpected token `>>'
+		+ echo >> | = bash: syntax error near unexpected token `|'
+		- echo ''>>'' = bash: : No such file or directory
+		- echo "">>"" = bash: : No such file or directory
+		
+	
+
+	- Записать кейсы с редиректом '<<'
+		Работают:
+		+ cat << "1"
+		+ cat <<"a" 
+		+ echo << echo = > error
+		+ <<echo = > error
+		+ << echo = > error 
+		+ echo "<< " = echo << 
+		+ "echo << 321" = echo << 321 cnf
+		+ echo echo << ls << 123 = > error
+		+ ec<<cho 123 = > error
+		+ echo 1<<23 = > error
+		+ echo 123 << ls = > error
+		+ echo 123 543 << ls << 123 << 540 = error
+		+ echo '<<' = echo <<
+		+ echo "<<" = echo <<
+		+ echo """<<""" = echo <<
+		+ echo '''<<''' = echo <<
+		+ echo '"<<"' = echo "<<"
+		+ echo "'<<'" = echo '<<'
+		+ echo 123 <<| = bash: syntax error near unexpected token `|'
+		+ echo 123 <<|| = bash: syntax error near unexpected token `||'
+		+ echo << = bash: syntax error near unexpected token `newline'
+		+ << = bash: syntax error near unexpected token `newline'
+		+ echo << | = bash: syntax error near unexpected token `|'
+		+ echo << = bash: syntax error near unexpected token `newline'
+		+ echo 123 << = bash: syntax error near unexpected token `newline'
+		+ echo << << 123 = bash: syntax error near unexpected token `<<'
+		+ echo 123 << | echo 321 << 234 = bash: syntax error near unexpected token `|'
+		+ echo 123 << | echo 321 << 234 << = bash: syntax error near unexpected token `|'
+		+ echo 123 << << = bash: syntax error near unexpected token `<<'
+		+ << << = bash: syntax error near unexpected token `<<'
+
+		- echo ''<<'' = > error
+		- echo ""<<"" = > error
+
+16.06.22
+	+ echo "cat lol.c | cat > lol.c"
+	+ echo "cat lol.c | cat > lol.c" | echo 123
+	+ echo 'cat lol.c | cat > lol.c' | echo 321
+
+
+	+ $? = 127 cnf
+	+ "$?" = 127 cnf
+	+ ""$?"" = 127 cnf
+	+ '$?' = '$?'
+	+ '"$?"'
++ Привести разбивку функций на подфункции
+	+ Пофиксить agr count
+
+- Протестировать с valgrind 
+	- echo "$USER" '$USER' = echo gtrinida $USER (b)
+	+ $echo "$echo $USER" $echo echo 123 =  gtrinida cnf  (b)
+	+ "$echo1 $echo2 $echo3 $echo4 $echo5 1" =      1 cnf (bv)
+	+ $echo "$echo $USER $echo echo 123" =  gtrinida  echo 123 cnf (vb SIEG)
+	+ "$USERA "$USER =  gtrinida cnf (b)
+	+ echo "$US"$ER = пустая строка (v)
+	+ echo aaaa"$AA' $USER" = echo aaaa' gtrinida (b)
+	+ echo aaaa"$AA' $123" = echo aaaa' 23 (b)
+	+ "$echo $echo $USER $echo echo 123" =   gtrinida  echo 123 cnf 
+	+ "$echo $USER" =  gtrinida cnf
+	+ "$UU"$ = $ cnf (vn)
+	+ $# = ничего (v)
++ Пофиксить кейсы
++ Пофиксить кейсы с редиректом
+	+ Протестировать редиректы с valgrind
+		+ Происходит утечка если редирект не в команде, когда он в команде то нет утечек
+- Сделать повторный тест всех кейсов c valgrind
+- Запушить
+- Сделать по норме
+- Сдать
